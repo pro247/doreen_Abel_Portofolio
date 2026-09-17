@@ -36,119 +36,121 @@
 }
 
 body {
-    background-color: var(--color-bg);
-    color: var(--color-text);
-    font-family: system-ui, -apple-system, sans-serif;
-    transition: var(--transition);
-    line-height: 1.6;
-}
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        background-color: var(--color-bg);
+        color: var(--color-text);
+        transition: var(--transition);
+        line-height: 1.6;
+    }
 
-/* 12-Column Flexible Center Container Layout */
-.section-container,
-.nav-container,
-.about-dashboard,
-.projects-page-container,
-.contact-grid {
-    width: 100%;
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 2rem 1rem;
-}
-
-
-/* 3. NAVIGATION STRUCTURE */
-header {
-    background-color: var(--color-surface);
-    border-bottom: 1px solid var(--color-border);
-    transition: var(--transition);
-}
-
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-}
-
-.logo {
-    font-weight: bold;
-    font-size: 1.25rem;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 1.5rem;
-}
-
-.nav-links a {
-    color: var(--color-text);
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.nav-links a.active,
-.nav-links a:hover {
-    color: var(--color-accent-hover);
-    border-bottom: 2px solid var(--color-accent-hover);
-}
-
-#theme-toggle {
-    background: none;
-    border: none;
-    font-size: 1.25rem;
-    cursor: pointer;
-}
-
-/* ==========================================
-   4. PROJECTS GRIDS (The 3-Column Desktop Grid Layout)
-   ========================================== */
-.projects-showcase-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* Exactly 3 Columns wide on Desktop */
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-.project-card {
-    background-color: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius);
-    padding: 1.5rem;
-    transition: var(--transition);
-}
-
-.card-header-tag {
-    font-size: 0.75rem;
-    font-weight: bold;
-    opacity: 0.7;
-    margin-bottom: 0.5rem;
-}
-
-.tech-badge-container {
-    display: flex;
-    gap: 0.5rem;
-    margin: 0.75rem 0;
-}
-
-.tech-tag {
-    background-color: var(--color-bg);
-    border: 1px solid var(--color-border);
-    padding: 0.25rem 0.5rem;
-    font-size: 0.75rem;
-    border-radius: 4px;
-}
+    /* 12-Column Flexible Center Container Layout */
+    .section-container,
+    .nav-container,
+    .about-dashboard,
+    .projects-page-container,
+    .contact-grid {
+        width: 100%;
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 2rem 1rem;
+    }
 
 
+    /* 3. NAVIGATION STRUCTURE */
+    header {
+        background-color: var(--color-surface);
+        border-bottom: 1px solid var(--color-border);
+        transition: var(--transition);
+    }
 
-@media (max-width: 768px) {
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+    }
 
-    .projects-showcase-grid {
-        grid-template-columns: 1fr;
+    .logo {
+        font-weight: bold;
+        font-size: 1.25rem;
     }
 
     .nav-links {
-        display: none;
+        display: flex;
+        list-style: none;
+        gap: 1.5rem;
     }
-}
+
+    .nav-links a {
+        color: var(--color-text);
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .nav-links a.active,
+    .nav-links a:hover {
+        color: var(--color-accent-hover);
+        border-bottom: 2px solid var(--color-accent-hover);
+    }
+
+    #theme-toggle {
+        background: none;
+        border: none;
+        font-size: 1.25rem;
+        cursor: pointer;
+    }
+
+    /* ==========================================
+   4. PROJECTS GRIDS (The 3-Column Desktop Grid Layout)
+   ========================================== */
+    .projects-showcase-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* Exactly 3 Columns wide on Desktop */
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .project-card {
+        background-color: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius);
+        padding: 1.5rem;
+        transition: var(--transition);
+    }
+
+    .card-header-tag {
+        font-size: 0.75rem;
+        font-weight: bold;
+        opacity: 0.7;
+        margin-bottom: 0.5rem;
+    }
+
+    .tech-badge-container {
+        display: flex;
+        gap: 0.5rem;
+        margin: 0.75rem 0;
+    }
+
+    .tech-tag {
+        background-color: var(--color-bg);
+        border: 1px solid var(--color-border);
+        padding: 0.25rem 0.5rem;
+        font-size: 0.75rem;
+        border-radius: 4px;
+    }
+
+
+
+    @media (max-width: 768px) {
+
+        .projects-showcase-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .nav-links {
+            display: none;
+        }
+    }
