@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Terminal | Doreen Providence Abel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="nav-container">
+            <div class="logo">DP Doreen.</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" aria-label="Toggle Theme">🌙</button>
+        </nav>
+    </header>
+
+    <main class="contact-page-container">
+        <div class="contact-grid">
+            <section class="social-links-panel">
+                <h1>Let's Connect</h1>
+                <p>Reach out via terminal nodes or official engineering correspondence lines.</p>
+                <div class="contact-method-cards">
+                    <a href="https://github.com" class="contact-card"><span>🐙 GitHub Profile</span></a>
+                    <a href="mailto:youremail@mubas.ac.mw" class="contact-card"><span>📧 MUBAS Mail System</span></a>
+                </div>
+            </section>
+
+            <section class="message-form-panel">
+                <form id="portfolio-contact-form" novalidate>
+                    <div class="form-row-split">
+                        <div class="input-group">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" required placeholder="Doreen">
+                        </div>
+                        <div class="input-group">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" required placeholder="Abel">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="user-email">Email Address</label>
+                        <input type="email" id="user-email" required placeholder="engineernode@mubas.ac.mw">
+                    </div>
+                    <div class="input-group">
+                        <label for="message-box">Message Content</label>
+                        <textarea id="message-box" rows="5" required placeholder="Write your message here..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-submit">Send Message</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Doreen Providence Abel.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
