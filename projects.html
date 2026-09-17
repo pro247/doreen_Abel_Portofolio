@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects Terminal | Doreen Providence Abel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="nav-container">
+            <div class="logo">DP Doreen.</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" aria-label="Toggle Theme">🌙</button>
+        </nav>
+    </header>
+
+    <main class="projects-page-container">
+        <header class="page-title-section">
+            <h1>Projects & Builds</h1>
+            <p>A compilation of embedded systems, AI modeling, and digital creations.</p>
+        </header>
+
+        <section class="projects-showcase-grid">
+            <article class="project-card">
+                <div class="card-header-tag">EMBEDDED AI</div>
+                <h3>TinyML Sensor System</h3>
+                <div class="tech-badge-container">
+                    <span class="tech-tag">TensorFlow Lite</span>
+                    <span class="tech-tag">Arduino</span>
+                </div>
+                <p>On-device machine learning deployment executing local sensor data inferences on low-power hardware layouts.</p>
+            </article>
+
+            <article class="project-card">
+                <div class="card-header-tag">HARDWARE CORE</div>
+                <h3>Final Year System</h3>
+                <div class="tech-badge-container">
+                    <span class="tech-tag">Embedded Systems</span>
+                    <span class="tech-tag">C++</span>
+                </div>
+                <p>An autonomous, localized physical computing framework built to process data points dynamically without cloud
+                    dependencies.</p>
+            </article>
+        </section>
+
+        <!-- Dynamic Container for JavaScript API injection -->
+        <section class="github-api-section">
+            <h2>Live Repositories Terminal</h2>
+            <div id="repo-container" class="github-cards-grid">
+                <div class="loading-state-card">
+                    <p>📡 Fetching code architectures live from GitHub...</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="fav-topic" class="longform-article-section">
+            <hr class="section-divider">
+            <h2>Why TinyML is the Future of Microcontrollers in Malawi</h2>
+            <div class="article-body-layout">
+                <p>Traditional AI relies on external cloud servers, which struggle in Malawi due to <strong>frequent power
+                        blackouts</strong> and unstable rural networks. TinyML fixes this infrastructure flaw by running highly optimized
+                    neural network models directly on low-power microcontrollers like the ESP32, processing environmental data locally
+                    without requiring internet data packets.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Doreen Providence Abel.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
