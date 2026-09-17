@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects Terminal | Doreen Providence Abel</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <!-- Linked Stylesheet using Sans Regular rules -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="site-wrapper">
 
+    <!-- UNIVERSAL HEADER COMPONENT -->
     <header>
         <nav class="nav-container">
             <div class="logo">DP Doreen.</div>
@@ -25,59 +27,106 @@
         </nav>
     </header>
 
-    <main class="projects-page-container">
-        <header class="page-title-section">
-            <h1>Projects & Builds</h1>
-            <p>A compilation of embedded systems, AI modeling, and digital creations.</p>
-        </header>
+    <!-- MAIN PROJECT SUBMISSION ENGINE -->
+    <main class="main-content">
+        <section class="projects-page-container">
 
-        <section class="projects-showcase-grid">
-            <article class="project-card">
-                <div class="card-header-tag">EMBEDDED AI</div>
-                <h3>TinyML Sensor System</h3>
-                <div class="tech-badge-container">
-                    <span class="tech-tag">TensorFlow Lite</span>
-                    <span class="tech-tag">Arduino</span>
-                </div>
-                <p>On-device machine learning deployment executing local sensor data inferences on low-power hardware layouts.</p>
-            </article>
+            <header class="projects-hero-header">
+                <span class="eyebrow-text">My work</span>
+                <h1>Projects and Builds.</h1>
+                <p class="tagline-sub">real Problems. Real solutions. Real Impact</p>
+            </header>
 
-            <article class="project-card">
-                <div class="card-header-tag">HARDWARE CORE</div>
-                <h3>Final Year System</h3>
-                <div class="tech-badge-container">
-                    <span class="tech-tag">Embedded Systems</span>
-                    <span class="tech-tag">C++</span>
-                </div>
-                <p>An autonomous, localized physical computing framework built to process data points dynamically without cloud
-                    dependencies.</p>
-            </article>
-        </section>
+            <!-- THE 3-COLUMN LAYOUT GRID (Exactly matching your Figma design screenshot) -->
+            <div class="projects-showcase-grid">
 
-        <!-- Dynamic Container for JavaScript API injection -->
-        <section class="github-api-section">
-            <h2>Live Repositories Terminal</h2>
-            <div id="repo-container" class="github-cards-grid">
-                <div class="loading-state-card">
-                    <p>📡 Fetching code architectures live from GitHub...</p>
-                </div>
+                <!-- Card 1: TinyML Sensor System -->
+                <article class="project-card">
+                    <span class="card-domain">Embedded AI</span>
+                    <h3>TinyML Sensor System</h3>
+                    <p class="card-desc">AI model deployed on a microcontroller.</p>
+                    <div class="tech-badge-container">
+                        <span class="tech-tag">TensorFlow Lite</span>
+                        <span class="tech-tag">Arduino nano</span>
+                        <span class="tech-tag">Python</span>
+                    </div>
+                </article>
+
+                <!-- Card 2: Final Year Project -->
+                <article class="project-card">
+                    <span class="card-domain">Engineering</span>
+                    <h3>Final Year Project</h3>
+                    <p class="card-desc">Flood Warning system, built with a colleague</p>
+                    <div class="tech-badge-container">
+                        <span class="tech-tag">Embedded Systems</span>
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">Documentation</span>
+                    </div>
+                </article>
+
+                <!-- Card 3: This Portfolio -->
+                <article class="project-card">
+                    <span class="card-domain">WEB.</span>
+                    <h3>This Portfolio</h3>
+                    <p class="card-desc">Designed and built from scratch</p>
+                    <div class="tech-badge-container">
+                        <span class="tech-tag">Figma</span>
+                        <span class="tech-tag">HTML.CSS</span>
+                        <span class="tech-tag">Javascript</span>
+                    </div>
+                </article>
+
+                <!-- Card 4: Data Communication Lab -->
+                <article class="project-card">
+                    <span class="card-domain">Networking</span>
+                    <h3>Data Communication Lab</h3>
+                    <p class="card-desc">AI model deployed on a Hands on experience with DC systems protocols.</p>
+                    <div class="tech-badge-container">
+                        <span class="tech-tag">Cisco Packet Tracer</span>
+                    </div>
+                </article>
+
+                <!-- Card 5: Server Monitoring System -->
+                <article class="project-card">
+                    <span class="card-domain">Engineering</span>
+                    <h3>Server Monitoring System</h3>
+                    <p class="card-desc">Built a real time environment serveroom monitoring system</p>
+                    <div class="tech-badge-container">
+                        <span class="tech-tag">Rasberry Pi</span>
+                        <span class="tech-tag">C++</span>
+                    </div>
+                </article>
+
+                <!-- Card 6: Next Project Coming Soon -->
+                <article class="project-card soon-card">
+                    <div class="soon-center-content">
+                        <h3>Next project</h3>
+                        <p class="date-stamp">TinyML - December Build</p>
+                    </div>
+                </article>
+
             </div>
-        </section>
 
-        <section id="fav-topic" class="longform-article-section">
-            <hr class="section-divider">
-            <h2>Why TinyML is the Future of Microcontrollers in Malawi</h2>
-            <div class="article-body-layout">
-                <p>Traditional AI relies on external cloud servers, which struggle in Malawi due to <strong>frequent power
-                        blackouts</strong> and unstable rural networks. TinyML fixes this infrastructure flaw by running highly optimized
-                    neural network models directly on low-power microcontrollers like the ESP32, processing environmental data locally
-                    without requiring internet data packets.</p>
-            </div>
+            <!-- DYNAMIC REGION: LIVE GITHUB REPOS CONTAINER (Rubric Requirement) -->
+            <section class="github-api-section">
+                <hr class="section-divider">
+                <h2>Live Code Repositories</h2>
+                <p>The card infrastructure below reads live public streams from my GitHub development account node using fetch algorithms.
+                </p>
+
+                <div id="repo-container" class="github-cards-grid">
+                    <div class="loading-state-card">
+                        <p>📡 Polling ://github.com for open builds...</p>
+                    </div>
+                </div>
+            </section>
+
         </section>
     </main>
 
+    <!-- FOOTER ALIGNED TO BOTTOM CENTER -->
     <footer class="site-footer">
-        <p>&copy; 2026 Doreen Providence Abel. MUBAS Year 5 Web Services.</p>
+        <p>&copy; 2026 Doreen Providence Abel. MUBAS Year 5 Portfolio Project.</p>
     </footer>
 
     <script src="script.js"></script>
