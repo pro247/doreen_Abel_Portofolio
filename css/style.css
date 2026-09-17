@@ -1,8 +1,8 @@
-/* 
-   1. DESIGN SYSTEM VARIABLES (Calculated Values)
-   */
+/* ==========================================================================
+   1. DESIGN SYSTEM VARIABLES (Calculated Purple Palette & Typography Tokens)
+   ========================================================================== */
 :root {
-    /* Your Calculated Purple Theme Palette */
+    /* Your Calculated Light Mode Theme Palette */
     --color-bg: #FFFFFF;
     --color-surface: #F3EEFB;
     --color-text: #44337A;
@@ -10,13 +10,15 @@
     --color-accent-hover: #7C3AED;
     --color-border: #E2D9F3;
 
-    /* Global Sizing Scales */
+    /* Layout Sizing & Hierarchy Rules */
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    /* Your Sans Regular font parameter */
     --max-width: 1200px;
     --radius: 8px;
-    --transition: background-color 0.3s ease, color 0.3s ease;
+    --transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Dark Mode Overrides (Theme Engine Variable Swap) */
+/* Dark Mode Variable Overrides (Theme Engine Variable Swap) */
 [data-theme="dark"] {
     --color-bg: #121212;
     --color-surface: #1E1730;
@@ -26,45 +28,98 @@
     --color-border: #2D253E;
 }
 
-/* 
-   2. CORE RESET & BASE LAYOUTS
- */
+/* ==========================================================================
+   2. STICKY FOOTER CORE RESET (Forces Copyright notice to Bottom Center)
+   ========================================================================= */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+html,
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 400;
-    background-color: var(--color-bg);
-    color: var(--color-text);
-    transition: var(--transition);
-    line-height: 1.6;
+    height: 100%;
 }
 
-/* 12-Column Flexible Center Container Layout */
-.section-container,
-.nav-container,
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    transition: var(--transition);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    /* Vertically stacks Header -> Main Content -> Footer */
+}
+
+/* Base layouts flex parameter pushes footer to absolute bottom on short screens */
+main,
+.main-content,
 .about-dashboard,
 .projects-page-container,
-.contact-grid {
+.contact-page-container,
+.article-page-wrapper {
+    flex: 1 0 auto;
     width: 100%;
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 2rem 1rem;
+    padding: 2.5rem 1rem;
 }
 
+/* Universal Fixed Bottom Centered Footer */
+footer,
+.site-footer {
+    flex-shrink: 0;
+    text-align: center;
+    /* Centers the text horizontally */
+    padding: 1.5rem;
+    background-color: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
 
-/* 3. NAVIGATION STRUCTURE */
+/* Base Accessibility Component Focus State */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+    outline: 3px solid var(--color-accent-hover);
+    outline-offset: 2px;
+}
+
+/* Global Action Button Tokens */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-accent);
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: var(--radius);
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background-color: var(--color-accent-hover);
+}
+
+/* ==========================================================================
+   3. UNIVERSAL HEADERS & NAVIGATION (Flexbox Alignment Engine)
+   ========================================================================== */
 header {
     background-color: var(--color-surface);
     border-bottom: 1px solid var(--color-border);
     transition: var(--transition);
+    width: 100%;
 }
 
 .nav-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -72,8 +127,8 @@ header {
 }
 
 .logo {
-    font-weight: bold;
-    font-size: 1.25rem;
+    font-weight: 700;
+    font-size: 1.3rem;
 }
 
 .nav-links {
@@ -86,6 +141,8 @@ header {
     color: var(--color-text);
     text-decoration: none;
     font-weight: 500;
+    padding-bottom: 4px;
+    transition: color 0.2s ease;
 }
 
 .nav-links a.active,
@@ -101,55 +158,536 @@ header {
     cursor: pointer;
 }
 
-/* ==========================================
-   4. PROJECTS GRIDS (The 3-Column Desktop Grid Layout)
-   ========================================== */
+/* ==========================================================================
+   4. HOME PAGE STYLING (Hero Layout & 4-Cell Metrics Grid Panel)
+   ========================================================================== */
+#hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0.25rem 0;
+}
+
+.hero-text h2 {
+    font-size: 1.5rem;
+    opacity: 0.9;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.tagline {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-text);
+    border: 1px solid var(--color-accent);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-surface);
+    color: var(--color-accent-hover);
+}
+
+/* Grayscale Avatar Component matching Figma blueprint wireframe graphics */
+.wireframe-avatar {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: var(--color-surface);
+    border: 2px dashed var(--color-border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+}
+
+/* The 4-Cell Home Layout Row Metric Box */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.stat-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    text-align: center;
+}
+
+.stat-card h3 {
+    font-size: 2rem;
+    color: var(--color-accent);
+}
+
+/* ==========================================================================
+   5. ABOUT PAGE STYLING (Split Dashboard Side-By-Side Layout)
+   ========================================================================== */
+.about-dashboard {
+    display: flex;
+    gap: 3rem;
+}
+
+.profile-card {
+    flex: 1;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 2rem;
+    align-self: flex-start;
+}
+
+.profile-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.profile-details-table {
+    list-style: none;
+    margin-top: 1.5rem;
+}
+
+.profile-details-table li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.content-stream {
+    flex: 2;
+}
+
+.bio-block {
+    margin-bottom: 2.5rem;
+}
+
+.bio-block h2,
+.experience-block h2 {
+    margin-bottom: 1rem;
+}
+
+.timeline-card {
+    background-color: var(--color-bg);
+    border-left: 4px solid var(--color-accent);
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.card-meta {
+    display: block;
+    font-size: 0.85rem;
+    opacity: 0.7;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   6. SKILLS PAGE STYLING (2-Column Metrics Grid Layout)
+   ========================================================================== */
+.page-title-section {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.page-title-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.skills-dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.skills-column h2 {
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--color-surface);
+    padding-bottom: 0.5rem;
+}
+
+.skill-item {
+    margin-bottom: 1.5rem;
+}
+
+.skill-name {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.progress-track {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    height: 12px;
+    width: 100%;
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.progress-bar {
+    background-color: var(--color-accent);
+    height: 100%;
+    border-radius: var(--radius);
+}
+
+/* ==========================================================================
+   7. PROJECTS PAGE STYLING (3-Column Layout Matching Figma Screenshot)
+   ========================================================================== */
+.projects-hero-header {
+    margin-bottom: 2.5rem;
+}
+
+.projects-hero-header .eyebrow-text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-accent);
+}
+
+.projects-hero-header h1 {
+    font-size: 2.8rem;
+    margin: 0.25rem 0;
+    font-weight: 700;
+}
+
+/* 3-Column Layout Matrix matching Figma columns 1-12 view */
 .projects-showcase-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* Exactly 3 Columns wide on Desktop */
     gap: 1.5rem;
-    margin-top: 2rem;
+    margin-bottom: 4rem;
 }
 
 .project-card {
     background-color: var(--color-surface);
     border: 1px solid var(--color-border);
     border-radius: var(--radius);
-    padding: 1.5rem;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 220px;
     transition: var(--transition);
 }
 
-.card-header-tag {
-    font-size: 0.75rem;
-    font-weight: bold;
+.card-domain {
+    font-size: 0.8rem;
+    font-weight: 600;
     opacity: 0.7;
-    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.project-card h3 {
+    font-size: 1.35rem;
+    margin: 0.5rem 0;
+    font-weight: 600;
+}
+
+.card-desc {
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+    flex-grow: 1;
 }
 
 .tech-badge-container {
     display: flex;
+    flex-wrap: wrap;
     gap: 0.5rem;
-    margin: 0.75rem 0;
+    margin-top: auto;
 }
 
 .tech-tag {
     background-color: var(--color-bg);
     border: 1px solid var(--color-border);
-    padding: 0.25rem 0.5rem;
+    padding: 0.25rem 0.6rem;
     font-size: 0.75rem;
     border-radius: 4px;
+    font-weight: 500;
 }
 
+/* Dotted special layout placeholder for upcoming node item card */
+.soon-card {
+    border: 1px dashed var(--color-accent);
+    background-color: transparent;
+    justify-content: center;
+    text-align: center;
+}
 
+.soon-center-content h3 {
+    margin: 0;
+}
 
-@media (max-width: 768px) {
+.date-stamp {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    margin-top: 0.25rem;
+}
 
-    .projects-showcase-grid {
-        grid-template-columns: 1fr;
-    }
+.section-divider {
+    border: 0;
+    height: 1px;
+    background-color: var(--color-border);
+    margin: 3rem 0;
+}
 
-    .nav-links {
-        display: none;
-    }
+/* GitHub Cards Grid Target Container */
+.github-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.loading-state-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    padding: 2rem;
+    text-align: center;
+    border-radius: var(--radius);
+    grid-column: 1 / -1;
+}
+
+/* ==========================================================================8. STANDALONE FAVORITE TOPIC PAGE STYLING (Single-Column Article view)========================================================================== /.longform-technical-post {max-width: 750px; / Limits maximum reading track widths for clean scannability */
+margin: 0 auto;
+}
+
+.article-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.category-meta {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--color-accent);
+}
+
+.author-meta {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-top: 0.5rem;
+}
+
+.article-content-body h2 {
+    margin: 2rem 0 1rem 0;
+}
+
+.article-content-body p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Wireframe X-Box image placeholders via SVG cross lines code */
+.wireframe-image-block {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    margin: 2rem 0;
+    padding: 2rem;
+    text-align: center;
+}
+
+.x-box-graphic {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.x-box-graphic svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.placeholder-caption {
+    position: relative;
+    z-index: 10;
+    background-color: var(--color-bg);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--color-border);
+    font-size: 0.85rem;
+    max-width: 80%;
+}
+
+.article-footer-navigation {
+    margin-top: 3rem;
+    border-top: 1px solid var(--color-border);
+    padding-top: 1.5rem;
+}
+
+/* ==========================================================================9. CONTACT PAGE STYLING (Split Row Validation Layout)========================================================================== */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+}
+
+.social-links-panel h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-method-cards {
+    margin-top: 2rem;
+}
+
+.contact-card {
+    display: block;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 500;
+    margin-bottom: 1rem;
+    transition: var(--transition);
+}
+
+.contact-card:hover {
+    border-color: var(--color-accent);
+    background-color: var(--color-bg);
+}
+
+.message-form-panel {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    padding: 2.5rem;
+    border-radius: var(--radius);
+}
+
+.form-row-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.input-group {
+    margin-bottom: 1.25rem;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    border-radius: var(--radius);
+    transition: var(--transition);
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 0.85rem;
+    font-size: 1rem;
+}
+
+/* ==========================================================================10. MOBILE RESPONSIVENESS RULES (Collapses Desktop Grids automatically)========================================================================== /@media (max-width: 900px) {/ Main container adapts padding safely for narrow frames */
+main,
+.main-content,
+.about-dashboard,
+.projects-page-container,
+.contact-page-container,
+.article-page-wrapper {
+    padding: 1.5rem 1rem;
+}
+
+/* Navbar folds gracefully onto mobile scales */
+.nav-container {
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Stacks Hero layouts vertically down the mobile stream */
+#hero {
+    flex-direction: column-reverse;
+    text-align: center;
+}
+
+.cta-buttons {
+    justify-content: center;
+}
+
+/* Stacks home layout metric cards down single file lines */
+.metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Collapses the About dashboard into single file view */
+.about-dashboard {
+    flex-direction: column;
+}
+
+/* Collapses the Skills 2-column metrics blocks */
+.skills-dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* Transforms 3-column project cards layout into 1 vertical column matching mobile wireframes */
+.projects-showcase-grid {
+    grid-template-columns: 1fr;
+}
+
+/* Collapses Contact split row panels vertically */
+.contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.form-row-split {
+    grid-template-columns: 1fr;
+    gap: 0;
 }
