@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Terminal | Doreen Providence Abel</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <title>Contact Me | Doreen Providence Abel</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="site-wrapper">
 
+    <!-- NAV BAR -->
     <header>
         <nav class="nav-container">
             <div class="logo">DP Doreen.</div>
@@ -25,45 +26,78 @@
         </nav>
     </header>
 
-    <main class="contact-page-container">
-        <div class="contact-grid">
-            <section class="social-links-panel">
-                <h1>Let's Connect</h1>
-                <p>Reach out via terminal nodes or official engineering correspondence lines.</p>
-                <div class="contact-method-cards">
-                    <a href="https://github.com" class="contact-card"><span>🐙 GitHub Profile</span></a>
-                    <a href="mailto:youremail@mubas.ac.mw" class="contact-card"><span>📧 Mail</span></a>
-                </div>
-            </section>
+    <main class="main-content">
+        <section class="contact-grid-wrapper">
 
-            <section class="message-form-panel">
+            <!-- LEFT SPLIT ROW: SOCIAL METHOD TILES -->
+            <div class="social-links-panel">
+                <span class="section-eyebrow">Contact</span>
+                <h2>Let's Connect</h2>
+                <p class="section-tagline">Open to Internships, research colaboration, and engingerring oppotunities both local and gloab. I
+                    owould love to hear from you</p>
+
+                <div class="contact-method-cards">
+                    <div class="contact-card">
+                        <strong>GitHub</strong>
+                        <span>://github.com</span>
+                    </div>
+
+                    <!-- Split Email Boxes (No Icons) -->
+                    <div class="contact-card">
+                        <strong>Personal Email</strong>
+                        <span>doreen4abel@gmail.com</span>
+                    </div>
+
+                    <div class="contact-card">
+                        <strong>Academic Email</strong>
+                        <span>bece21-dabel@mubas.ac.mw</span>
+                    </div>
+
+                    <div class="contact-card">
+                        <strong>Phone</strong>
+                        <span>+2565884136090 / +265984427564</span>
+                    </div>
+
+                    <a href="assets/Doreen_Abel_CV.pdf" download class="contact-card download-card">
+                        <strong>Download CV/Resume(PDF)</strong>
+                    </a>
+                </div>
+            </div>
+
+            <!-- RIGHT SPLIT ROW: INPUT SYSTEM TILES -->
+            <div class="message-form-panel">
                 <form id="portfolio-contact-form" novalidate>
                     <div class="form-row-split">
                         <div class="input-group">
                             <label for="first-name">First Name</label>
-                            <input type="text" id="first-name" required placeholder="Doreen">
+                            <input type="text" id="first-name" required placeholder="First Name">
                         </div>
                         <div class="input-group">
                             <label for="last-name">Last Name</label>
-                            <input type="text" id="last-name" required placeholder="Abel">
+                            <input type="text" id="last-name" required placeholder="Last Name">
                         </div>
                     </div>
                     <div class="input-group">
-                        <label for="user-email">Email Address</label>
-                        <input type="email" id="user-email" required placeholder="engineernode@mubas.ac.mw">
+                        <label for="user-email">Email</label>
+                        <input type="email" id="user-email" required placeholder="Email">
                     </div>
                     <div class="input-group">
-                        <label for="message-box">Message Content</label>
-                        <textarea id="message-box" rows="5" required placeholder="Write your message here..."></textarea>
+                        <label for="subject-line">Subject</label>
+                        <input type="text" id="subject-line" required placeholder="Subject">
                     </div>
-                    <button type="submit" class="btn btn-submit">Send Message</button>
+                    <div class="input-group">
+                        <label for="message-box">Message</label>
+                        <textarea id="message-box" rows="4" required placeholder="Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-submit">Send message</button>
                 </form>
-            </section>
-        </div>
+            </div>
+
+        </section>
     </main>
 
     <footer class="site-footer">
-        <p>&copy; 2026 Doreen Providence Abel. MUBAS Year 5 Web Services.</p>
+        <p>&copy; 2026 Doreen Providence Abel. MUBAS Engineering Track.</p>
     </footer>
 
     <script src="script.js"></script>
