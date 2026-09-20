@@ -1,0 +1,142 @@
+/**
+ * MUBAS Year 5 Internet & Web Services Portfolio Interactivity Script
+ * Central Application Core Handler Engine
+ */
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    // ==========================================================================
+    // A. MOBILE HAMBURGER NAVIGATION MOBILE DRAWER INTERACTION
+    // ==========================================================================
+    const hamburgerTrigger = document.getElementById('hamburger-trigger');
+    const navLinksContainer = document.querySelector('.nav-links');
+
+    if (hamburgerTrigger && navLinksContainer) {
+        hamburgerTrigger.addEventListener('click', () => {
+            // Toggles the custom active state class rule to slide menu items down
+            navLinksContainer.classList.toggle('active');
+
+            // Subtle accessible icon state shift interaction feedback loop
+            if (navLinksContainer.classList.contains('active')) {
+                hamburgerTrigger.textContent = '✕'; // Swaps icon to close cross graphic mark
+            } else {
+                hamburgerTrigger.textContent = '☰'; // Restores layout baseline icon
+            }
+        });
+
+        // Autoclose navigation drawer layout panel if a link item node is clicked
+        const individualLinks = navLinksContainer.querySelectorAll('a');
+        individualLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinksContainer.classList.remove('active');
+                hamburgerTrigger.textContent = '☰';
+            });
+        });
+    }
+
+    // ==========================================================================
+    // B. LIGHT / DARK MODE ENGINE (Theme Preference Variable Swap Manager)
+    // ==========================================================================
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const cachedPreference = localStorage.getItem('theme') || 'light';
+
+    // Run state injection immediately on element initialization nodes
+    document.documentElement.setAttribute('data-theme', cachedPreference);
+    if (themeToggleBtn) {
+        themeToggleBtn.textContent = cachedPreference === 'dark' ? '☀️' : '🌙';
+    }
+
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+            const currentActiveState = document.documentElement.getAttribute('data-theme');
+            const targetState = currentActiveState === 'light' ? 'dark' : 'light';
+
+            document.documentElement.setAttribute('data-theme', targetState);
+            localStorage.setItem('theme', targetState);
+            themeToggleBtn.textContent = targetState === 'dark' ? '☀️' : '🌙';
+        });
+    }
+
+    // ==========================================================================
+    // C. ASYNCHRONOUS DATA ACQUISITION LOOP (Dynamic Cloud API Stream Handler)
+    // ==========================================================================
+    const targetRepoGrid = document.getElementById('repo-container');
+    const TARGET_NODE_USER = 'pro247'; // Directly points to your profile account directory name!
+
+    async function streamCloudRepositoryData() {
+        if (!targetRepoGrid) return; // Breaks loop gracefully if loading alternative text frames
+
+        try {
+            const endpointStream = await fetch(`https://github.com{TARGET_NODE_USER}/repos?sort=updated&per_page=3`);
+
+            if (!endpointStream.ok) {
+                throw new Error('Cloud signal validation failure structural exception.');
+            }
+
+            const datasets = await endpointStream.json();
+            targetRepoGrid.innerHTML = ''; // Flushes loading state placeholder card safely
+
+            if (datasets.length === 0) {
+                targetRepoGrid.innerHTML = `
+                    <div class="loading-state-card">
+                        <p>📦 Zero open public repository assets linked to this account directory node.</p>
+                    </div>`;
+                return;
+            }
+
+            // Injects responsive cloud repo cards into the live DOM list stream dynamically
+            datasets.forEach(repo => {
+                const repositoryCardNode = document.createElement('article');
+                repositoryCardNode.className = 'project-card';
+
+                const verifiedDescriptionText = repo.description ? repo.description : 'Active code layout framework deployed without static descriptive summary tags.';
+
+                repositoryCardNode.innerHTML = `
+                    <span class="card-domain">GITHUB DYNAMIC FORK</span>
+                    <h3>${repo.name}</h3>
+                    <p class="card-desc">${verifiedDescriptionText}</p>
+                    <div class="tech-badge-container">
+                        <span class="tech-tag">⭐ Stars: ${repo.stargazers_count}</span>
+                        <span class="tech-tag">${repo.language || 'Config Scripts'}</span>
+                        <a href="${repo.html_url}" target="_blank" class="tech-tag" style="color: var(--color-accent); font-weight: 700; text-decoration: underline;">Source Branch ↗</a>
+                    </div>
+                `;
+                targetRepoGrid.appendChild(repositoryCardNode);
+            });
+
+        } catch (faultException) {
+            console.error('API Stream Processing Exception:', faultException);
+            targetRepoGrid.innerHTML = `
+                <div class="loading-state-card" style="border-color: #E53E3E;">
+                    <p>❌ Operational Route Interrupted: Failed to link server array nodes securely from GitHub.</p>
+                </div>`;
+        }
+    }
+
+    // Direct invocation command runs live cloud integration updates automatically
+    streamCloudRepositoryData();
+
+    // ==========================================================================
+    // D. SECURE FIELD SUBMISSION INTERCEPT (Contact Form Validation Logic)
+    // ==========================================================================
+    const interactionForm = document.getElementById('portfolio-contact-form');
+
+    if (interactionForm) {
+        interactionForm.addEventListener('submit', (eventBlock) => {
+            eventBlock.preventDefault(); // Curbs default browser refresh vectors safely
+
+            const fieldFirst = document.getElementById('first-name').value.trim();
+            const fieldLast = document.getElementById('last-name').value.trim();
+            const fieldMail = document.getElementById('user-email').value.trim();
+            const fieldText = document.getElementById('message-box').value.trim();
+
+            if (!fieldFirst || !fieldLast || !fieldMail || !fieldText) {
+                alert('Validation Fault: Mandatory inputs cannot be passed with empty fields.');
+                return;
+            }
+
+            alert(`⚡ Signal Locked! Communication loop logged from client node: "${fieldFirst} ${fieldLast}". Transmission simulation complete.`);
+            interactionForm.reset(); // Restores placeholder properties safely
+        });
+    }
+});
