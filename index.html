@@ -4,18 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doreen Providence Abel | Technical Portfolio</title>
-    <!-- Link to your external stylesheet -->
-    <link rel="stylesheet" href="./css/style.css">
+    <title>Doreen Providence Abel | Engineering Portfolio</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body>
+<body class="site-wrapper">
 
-    <!-- 1. NAVIGATION HEADER -->
+    <!-- NAVIGATION HEADER (Figma Component Rule Parity) -->
     <header>
         <nav class="nav-container">
             <div class="logo">DP Doreen.</div>
-            <!-- Standard Desktop Links -->
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -24,63 +22,58 @@
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="fav-topic.html">Fav Topic</a></li>
             </ul>
-            <!-- Theme Toggle Button (Rubric Engine Component) -->
-            <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">🌙</button>
+            <button id="theme-toggle" aria-label="Toggle Theme Logic Node">🌙</button>
         </nav>
     </header>
 
-    <!-- MAIN HOMEPAGE CONTENT -->
-    <main>
-        <!-- 2. HERO / INTRODUCTION SECTION -->
-        <section id="hero" class="section-container">
-            <div class="hero-text">
-                <span class="subheading">HELLO I'M</span>
+    <!-- HERO INTRODUCTION ELEMENT -->
+    <main class="main-content">
+        <section id="hero" class="hero-split-layout">
+            <div class="hero-text-block">
+                <span class="eyebrow-sub">HELLO I'M</span>
                 <h1>Doreen Providence Abel</h1>
                 <h2>Aspiring Embedded Systems & AI ML Engineer</h2>
-                <p class="tagline">Based in Malawi, Building for Malawi to the world!</p>
-
-                <!-- Action Buttons -->
-                <div class="cta-buttons">
+                <p class="hero-tagline">Based in Malawi, Building for Malawi to the world!</p>
+                <div class="cta-action-group">
                     <a href="projects.html" class="btn btn-primary">View my work</a>
                     <a href="assets/Doreen_Abel_CV.pdf" download class="btn btn-secondary">Download CV</a>
                 </div>
             </div>
 
-            <!-- Wireframe Wire-Circle Avatar Placeholder -->
-            <div class="hero-avatar-container">
-                <div class="wireframe-avatar">
-                    <span class="avatar-text">DP Avatar Placeholder</span>
+            <!-- Wireframe Canvas Circle Avatar Module Placeholder -->
+            <div class="hero-avatar-wrapper">
+                <div class="wireframe-avatar-circle">
+                    <span>DP Avatar Node</span>
                 </div>
             </div>
         </section>
 
-        <!-- 3. METRICS / STATS COMPONENT  -->
-        <section id="metrics" class="metrics-grid">
-            <div class="stat-card">
+        <!-- 4-CELL GRID METRICS DISPLAY (Lecturer Layout Grid Criterion) -->
+        <section id="metrics" class="metrics-panel-grid">
+            <div class="metric-card">
                 <h3>5+</h3>
                 <p>Projects Built</p>
             </div>
-            <div class="stat-card">
+            <div class="metric-card">
                 <h3>3+</h3>
                 <p>TinyML Models</p>
             </div>
-            <div class="stat-card">
+            <div class="metric-card">
                 <h3>1</h3>
                 <p>Running Business</p>
             </div>
-            <div class="stat-card">
+            <div class="metric-card">
                 <h3>21</h3>
                 <p>Years Young</p>
             </div>
         </section>
     </main>
 
-
+    <!-- BOTTOM-CENTERED FIXED COPYRIGHT FOOTER -->
     <footer class="site-footer">
-        <p>&copy; 2026 Doreen Providence Abel. MUBAS Year 5 Web Services.</p>
+        <p>&copy; 2026 Doreen Providence Abel. MUBAS Year 5 Internet & Web Services Project.</p>
     </footer>
 
-    <!-- Core Script Link -->
     <script src="script.js"></script>
 </body>
 
