@@ -10,10 +10,12 @@
 
 <body class="site-wrapper">
 
-    <!-- NAVBAR -->
+    <!-- UNIVERSAL HEADER COMPONENT -->
     <header>
         <nav class="nav-container">
             <div class="logo">DP Doreen.</div>
+
+            <!-- Standard Desktop Navigation Links Container -->
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -22,9 +24,15 @@
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="fav-topic.html" class="active">Fav Topic</a></li>
             </ul>
-            <button id="theme-toggle" aria-label="Toggle Theme">🌙</button>
+
+            <!-- Right-Side Utilities Group (Theme Toggle and Mobile Hamburger Trigger Button Component) -->
+            <div class="nav-utilities">
+                <button id="theme-toggle" aria-label="Toggle Theme State">🌙</button>
+                <button id="hamburger-trigger" aria-label="Toggle Mobile Navigation Drawer">☰</button>
+            </div>
         </nav>
     </header>
+
 
     <main class="main-content">
         <section class="fav-topic-page-layout">

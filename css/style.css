@@ -868,3 +868,259 @@ header {
         gap: 2.5rem;
     }
 }
+
+/* ==========================================================================
+   CONTACT WORKSPACE LAYOUT (Figma Screenshot Grid Parity Mapping)
+   ========================================================================== */
+
+/* 1. Master Parallel Column Split */
+.contact-grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    /* Matches the exact spacing ratio from your screenshot */
+    gap: 3.5rem;
+    align-items: start;
+    margin-top: 1.5rem;
+}
+
+.social-links-panel .section-eyebrow {
+    font-size: 0.95rem;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.social-links-panel h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0.2rem 0 0.5rem 0;
+}
+
+.section-tagline {
+    font-size: 1.05rem;
+    opacity: 0.9;
+    margin-bottom: 2.5rem;
+    line-height: 1.5;
+}
+
+.contact-method-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    /* Precise spacing gap height separating tiles */
+}
+
+/* 2. Left Row Box Modules (Shaded Background Cards with Rounded Corners) */
+.contact-card {
+    background-color: var(--color-surface);
+    /* Uses your purple design background token */
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    align-items: center;
+    /* Horizontally rows your placeholder icons alongside your text details */
+    gap: 1.25rem;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: var(--transition);
+}
+
+/* Left Icon Placement Circular Node Box */
+.card-icon-placeholder {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: var(--color-bg);
+    /* Contrast circle container */
+    border: 1px solid var(--color-border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+/* Simple fallback visual center dot inside your icon holder circles */
+.fallback-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+}
+
+.card-text-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.card-text-group strong {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0.8;
+}
+
+.card-text-group span {
+    font-size: 1rem;
+    font-weight: 500;
+    word-break: break-all;
+}
+
+/* Special full-width variant link block for your Resume container */
+.download-card-node {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.contact-card:hover {
+    border-color: var(--color-accent);
+    background-color: var(--color-bg);
+}
+
+/* 3. Right Column Form Background Panel */
+.message-form-panel {
+    background-color: var(--color-surface);
+    /* Shaded gray/purple container card panel matching your canvas */
+    border: 1px solid var(--color-border);
+    padding: 2.5rem;
+    border-radius: var(--radius);
+}
+
+.form-row-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Splitting row for First Name / Last Name */
+    gap: 1.25rem;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+/* Clear, borderless white text input elements directly matching your image blocks */
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-bg);
+    /* Pure white internal input substrate */
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    background-color: var(--color-bg);
+}
+
+/* Centered submission button component box matching your bottom card track */
+.btn-submit-node {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--color-bg);
+    /* Flat white card button appearance matching sketch reference */
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-submit-node:hover {
+    background-color: var(--color-accent);
+    color: #FFFFFF;
+    border-color: var(--color-accent);
+}
+
+/* 4. Cross-Viewport Mobile Adjustments */
+@media (max-width: 950px) {
+    .contact-grid-wrapper {
+        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .form-row-split {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .message-form-panel {
+        padding: 1.5rem;
+    }
+}
+
+/* ==========================================================================
+   MOBILE HAMBURGER DRAWER & RESPONSIVE NAV COMPONENT STYLES
+   ========================================================================== */
+.nav-utilities {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+#hamburger-trigger {
+    display: none;
+    /* Hidden by default on standard wide desktop monitors */
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    color: var(--color-text);
+    cursor: pointer;
+    padding: 0.25rem;
+    transition: var(--transition);
+}
+
+/* Responsive Viewport Breakdown (Overrides standard mobile menu layout) */
+@media (max-width: 950px) {
+    #hamburger-trigger {
+        display: block;
+        /* Turns on the hamburger icon button component across phone frames */
+    }
+
+    /* Transforms the standard links row list into an absolute positioned drop-down panel */
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        /* Sits perfectly beneath the header row boundary line */
+        left: 0;
+        width: 100%;
+        background-color: var(--color-surface);
+        border-bottom: 2px solid var(--color-border);
+        padding: 2rem;
+        gap: 1.5rem;
+        text-align: center;
+        z-index: 999;
+
+        /* Interactive Animation Logic: Hidden off-screen by default until class is added */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    }
+
+    /* Attached via JavaScript instantly when the hamburger button node is clicked */
+    .nav-links.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
