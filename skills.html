@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skills Terminal | Doreen Providence Abel</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <title>Skills & Expertise | Doreen Providence Abel</title>
+    <!-- Linked Stylesheet using Sans Regular rules -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="site-wrapper">
 
-    <!-- UNIVERSAL HEADER COMPONENT -->
+    <!-- UNIVERSAL NAVBAR -->
     <header>
         <nav class="nav-container">
             <div class="logo">DP Doreen.</div>
@@ -26,80 +27,42 @@
         </nav>
     </header>
 
-    <!-- MAIN SKILLS METRICS CONTENT -->
+    <!-- MAIN EXPERTISE PANEL -->
     <main class="main-content">
-        <section class="section-container">
-            <header class="page-title-section">
-                <h1>Technical Proficiency & Core Tools</h1>
-                <p>A quantified breakdown of my hardware engineering, AI model training, and soft skill systems.</p>
+        <section class="skills-page-wrapper">
+
+            <!-- Exact Figma Headline Elements -->
+            <header class="skills-hero-header">
+                <span class="eyebrow-text">My expertise</span>
+                <h1>Skills and Tools</h1>
+                <p class="tagline-sub">Built through coursework, real projects, competition and relentless curiosity.</p>
             </header>
 
-            <!-- 2-COLUMN SKILLS METRIC GRID (Matches your Desktop Wireframe Grid!) -->
+            <!-- 2-COLUMN EXPERTISE DASHBOARD GRID (Matches your Figma columns exactly!) -->
             <div class="skills-dashboard-grid">
 
-                <!-- Left Column: Technical Core -->
-                <div class="skills-column">
-                    <h2>Technical Engineering</h2>
-
-                    <div class="skill-item">
-                        <span class="skill-name">C++ Programming</span>
-                        <div class="progress-track">
-                            <div class="progress-bar" style="width: 85%;"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill-item">
-                        <span class="skill-name">Arduino & Circuit Configuration</span>
-                        <div class="progress-track">
-                            <div class="progress-bar" style="width: 90%;"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill-item">
-                        <span class="skill-name">ESP32 Hardware Module Deployment</span>
-                        <div class="progress-track">
-                            <div class="progress-bar" style="width: 80%;"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill-item">
-                        <span class="skill-name">TinyML & Embedded Artificial Intelligence</span>
-                        <div class="progress-track">
-                            <div class="progress-bar" style="width: 75%;"></div>
-                        </div>
+                <!-- Left Card Module: Technical Skills Component -->
+                <div class="skills-column-card">
+                    <h2>Technical skills</h2>
+                    <div class="skills-list-stack">
+                        <div class="skill-badge-row">C++ programming</div>
+                        <div class="skill-badge-row">Arduino/ESP32</div>
+                        <div class="skill-badge-row">Circuit design with Proteus</div>
+                        <div class="skill-badge-row">HTML/CSS/Javascript</div>
+                        <div class="skill-badge-row">Git and Github</div>
+                        <div class="skill-badge-row">TinyML</div>
                     </div>
                 </div>
 
-                <!-- Right Column: Professional Tools & Soft Skills -->
-                <div class="skills-column">
-                    <h2>Tools & Professional Scales</h2>
-
-                    <div class="skill-item">
-                        <span class="skill-name">Git & Distributed Version Control (GitHub)</span>
-                        <div class="progress-track">
-                            <div class="progress-bar" style="width: 85%;"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill-item">
-                        <span class="skill-name">SCADA & Digital System Troubleshooting</span>
-                        <div class="progress-track">
-                            <div class="progress-bar" style="width: 70%;"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill-item">
-                        <span class="skill-name">Creative System Problem Solving</span>
-                        <div class="progress-track">
-                            <div class="progress-bar" style="width: 90%;"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill-item">
-                        <span class="skill-name">Engineering Track Time Management</span>
-                        <div class="progress-track">
-                            <div class="progress-bar" style="width: 95%;"></div>
-                        </div>
+                <!-- Right Card Module: Soft Skills Component -->
+                <div class="skills-column-card">
+                    <h2>Soft Skills</h2>
+                    <div class="skills-list-stack">
+                        <div class="skill-badge-row">Active Listening</div>
+                        <div class="skill-badge-row">Public Speaking</div>
+                        <div class="skill-badge-row">Curriculum design and mentorship</div>
+                        <div class="skill-badge-row">Team working</div>
+                        <div class="skill-badge-row">Creative problem solving</div>
                     </div>
                 </div>
 
@@ -107,9 +70,9 @@
         </section>
     </main>
 
-    <!-- UNIVERSAL FOOTER (Configured for Bottom-Center Alignment) -->
+    <!-- STICKY FOOTER COPYRIGHT NOTICE -->
     <footer class="site-footer">
-        <p>&copy; 2026 Doreen Providence Abel. MUBAS Year 5 Web Services.</p>
+        <p>&copy; 2026 Doreen Providence Abel. MUBAS Year 5 Web Services Framework.</p>
     </footer>
 
     <script src="script.js"></script>
