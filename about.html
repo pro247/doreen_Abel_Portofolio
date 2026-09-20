@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me | Doreen Providence Abel</title>
+    <title>About Terminal | Doreen Providence Abel</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body>
+<body class="site-wrapper">
 
     <header>
         <nav class="nav-container">
@@ -25,44 +25,73 @@
         </nav>
     </header>
 
-    <main class="about-dashboard">
-        <aside class="profile-card">
-            <div class="profile-avatar">DP</div>
+    <!-- DASHBOARD UNEVEN SPLIT GRID (Columns 1-4 vs Columns 5-12) -->
+    <main class="main-content about-dashboard-layout">
+
+        <!-- LEFT CONTROL SIDEBAR: PROFILE DATA BLOCK -->
+        <aside class="profile-aside-card">
+            <div class="profile-circle-placeholder">DP</div>
             <h2>Doreen P. Abel</h2>
-            <p class="profile-title">Electronics & Computer Engineer</p>
-            <ul class="profile-details-table">
-                <li><strong>University:</strong> MUBAS</li>
-                <li><strong>Year:</strong> 5 (Final Year)</li>
-                <li><strong>Specialization:</strong> TinyML & Embedded AI</li>
-                <li><strong>Based In:</strong> Blantyre, Malawi</li>
+            <p class="profile-subtitle-tag">Electronics & Computer Engineer</p>
+            <hr class="card-separator">
+            <ul class="meta-data-table">
+                <li><strong>University:</strong> MUBAS, Malawi</li>
+                <li><strong>Degree:</strong> B.Eng Electronics & Computer</li>
+                <li><strong>Year:</strong> 5th Year (Final)</li>
+                <li><strong>Speciality:</strong> TinyML, Embedded AI</li>
+                <li><strong>Location:</strong> Blantyre, Malawi</li>
+                <li><strong>GitHub:</strong> ://github.com</li>
+                <li><strong>Status:</strong> Open to Opportunities</li>
             </ul>
         </aside>
 
-        <section class="content-stream">
-            <article class="bio-block">
+        <!-- RIGHT DATA STREAM: BIOGRAPHY, HIGHLIGHTS, EXPERIENCES -->
+        <section class="content-stream-panel">
+
+            <article class="narrative-block">
                 <h2>My Story</h2>
-                <p>I am an enthusiastic engineering student at MUBAS. My technical focus centers on building localized, low-power
-                    intelligent embedded systems to solve community and structural infrastructure issues across Malawi.</p>
+                <p>I am an enthusiastic, creative, and lifelong learner pursuing my final year at MUBAS. My core technical passion lies in
+                    building localized intelligent systems using <strong>TinyML</strong> and embedded devices to solve infrastructure
+                    challenges unique to Malawi.</p>
+                <p>Beyond engineering, I run a small crochet business, advocate for girls in tech, and follow three core values: Discipline,
+                    Curiosity, and Continuous Growth.</p>
+            </article>
+
+            <article class="milestones-block">
+                <h2>Awards & Highlights</h2>
+                <div class="timeline-event-card highlight-node">
+                    <span class="timeline-date">2024</span>
+                    <h3>ICTAM Innovation Jam Recognition</h3>
+                    <p>Awarded top places for hardware tracking concept matrices built for localized environments.</p>
+                </div>
+                <div class="timeline-event-card highlight-node">
+                    <span class="timeline-date">2024</span>
+                    <h3>UbuntuNet Alliance Hackathon</h3>
+                    <p>4th place — Globally represented Malawian student engineering initiatives in edge computing frameworks.</p>
+                </div>
             </article>
 
             <article class="experience-block">
                 <h2>Experience & Volunteering</h2>
-                <div class="timeline-card">
+                <div class="timeline-event-card">
+                    <span class="timeline-date">Aug 2024 - Present</span>
                     <h3>Python & Scratch Tutor</h3>
-                    <span class="card-meta">MUBAS | Aug 2024 - Present</span>
-                    <p>Teaching coding fundamentals to learners aged 6–17, transforming complex logic into visual milestones.</p>
+                    <p><strong>MUBAS</strong> — Teaching fundamental software logic trees and visual block programming architectures to
+                        children aged 6–17.</p>
                 </div>
-                <div class="timeline-card">
+                <div class="timeline-event-card">
+                    <span class="timeline-date">Mar 2025 - Present</span>
                     <h3>FemTech Network Ambassador</h3>
-                    <span class="card-meta">FemTech Malawi | Mar 2025 - Present</span>
-                    <p>Advocating for young girls entering technical computing tracks and leading hardware mentorship clinics.</p>
+                    <p><strong>FemTech Malawi</strong> — Leading peer hardware outreach initiatives and providing resources to young women
+                        entering STEM fields.</p>
                 </div>
             </article>
+
         </section>
     </main>
 
     <footer class="site-footer">
-        <p>&copy; 2026 Doreen Providence Abel. MUBAS Year 5 Web Services.</p>
+        <p>&copy; 2026 Doreen Providence Abel. MUBAS Final Year Portfolio.</p>
     </footer>
 
     <script src="script.js"></script>
