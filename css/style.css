@@ -944,21 +944,18 @@ img.wireframe-avatar-circle,
 
 .card-text-group {
     display: flex;
-    flex-direction: column;
-    gap: 0.1rem;
+    flex-direction: row;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
-.card-text-group strong {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: var(--color-accent);
-}
 
 .card-text-group span {
     font-size: 0.95rem;
     font-weight: 500;
     word-break: break-all;
+    opacity: 0.95;
 }
 
 .contact-card:hover {
