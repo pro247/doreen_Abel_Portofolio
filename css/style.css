@@ -750,3 +750,121 @@ header {
         gap: 2rem;
     }
 }
+
+/* ==========================================================================
+   404 SERVER EXCEPTION CUSTOM CANVAS OVERRIDES
+   ========================================================================== */
+.error-body-canvas {
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-bg);
+}
+
+.error-page-alignment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    /* Expands container view since header block is removed */
+}
+
+/* ==========================================================================
+   CONTACT SOCIAL CARDS GRID SYSTEM (Figma Design Parity Map)
+   ========================================================================== */
+
+/* 1. Split Layout Grid Wrapper */
+.contact-grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    /* Splits left column vs right form panel */
+    gap: 3.5rem;
+    margin-top: 2rem;
+}
+
+/* 2. Left Column Layout Spacing */
+.social-links-panel .section-eyebrow {
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-accent);
+}
+
+.social-links-panel h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0.2rem 0 0.75rem 0;
+}
+
+.section-tagline {
+    font-size: 1.05rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+/* 3. Vertical Stack Container for Your Cards */
+.contact-method-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /* Creates exact separation margins between boxes */
+}
+
+/* 4. The Individual Boxed Cards (Directly Mirroring Your Figma Boxes) */
+.contact-card {
+    background-color: var(--color-surface);
+    /* Light purple calculated surface tint */
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    /* Rounded corner variables matching design system */
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    /* Stacks bold labels on top of text handles */
+    gap: 0.25rem;
+    text-decoration: none;
+    /* Keeps anchors from displaying standard underlines */
+    color: var(--color-text);
+    transition: var(--transition);
+}
+
+/* Styling the Bold Technical Headers inside your cards */
+.contact-card strong {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-accent);
+    font-weight: 700;
+}
+
+/* Styling the raw detail text labels inside your cards */
+.contact-card span {
+    font-size: 1rem;
+    word-break: break-all;
+    /* Keeps long email addresses from clipping out of the boxes */
+}
+
+/* Special styling override variant box for your Download Link Card */
+.download-card {
+    border: 1px solid var(--color-accent);
+    cursor: pointer;
+}
+
+/* Interactive hover response tracking */
+.contact-card:hover {
+    border-color: var(--color-accent-hover);
+    background-color: var(--color-bg);
+    /* Swaps backgrounds smoothly to highlight focus */
+    transform: translateY(-2px);
+    /* Subtle shift up interaction */
+}
+
+/* 5. Mobile Responsive Auto-collapse Overrides */
+@media (max-width: 900px) {
+    .contact-grid-wrapper {
+        grid-template-columns: 1fr;
+        /* Collapses split panels onto single lines for phones */
+        gap: 2.5rem;
+    }
+}

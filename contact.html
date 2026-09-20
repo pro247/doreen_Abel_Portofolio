@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me | Doreen Providence Abel</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Contact Terminal | Doreen Providence Abel</title>
+    <!-- Linked Stylesheet using Sans Regular rules -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="site-wrapper">
 
-    <!-- NAV BAR -->
+    <!-- UNIVERSAL HEADER COMPONENT -->
     <header>
         <nav class="nav-container">
             <div class="logo">DP Doreen.</div>
@@ -26,78 +27,110 @@
         </nav>
     </header>
 
+    <!-- MAIN CONTACT CONTENT ROW GRID -->
     <main class="main-content">
         <section class="contact-grid-wrapper">
 
-            <!-- LEFT SPLIT ROW: SOCIAL METHOD TILES -->
+            <!-- LEFT PANEL STREAM: SOCIAL CONNECTIVITY INFORMATION -->
             <div class="social-links-panel">
                 <span class="section-eyebrow">Contact</span>
                 <h2>Let's Connect</h2>
                 <p class="section-tagline">Open to Internships, research colaboration, and engingerring oppotunities both local and gloab. I
                     owould love to hear from you</p>
 
+                <!-- Reusable list containers exactly matching your Figma wireframe layout -->
                 <div class="contact-method-cards">
+
+                    <!-- GitHub Entry Tile -->
                     <div class="contact-card">
-                        <strong>GitHub</strong>
-                        <span>://github.com</span>
+                        <div class="card-icon-placeholder">
+                            <!-- SVG Placeholder replacing icon file for code cleanliness -->
+                            <span class="fallback-dot"></span>
+                        </div>
+                        <div class="card-text-group">
+                            <strong>GitHub</strong>
+                            <span>://github.com</span>
+                        </div>
                     </div>
 
-                    <!-- Split Email Boxes (No Icons) -->
+                    <!-- Single Consolidated Email Entry Tile -->
                     <div class="contact-card">
-                        <strong>Personal Email</strong>
-                        <span>doreen4abel@gmail.com</span>
+                        <div class="card-icon-placeholder">
+                            <span class="fallback-dot"></span>
+                        </div>
+                        <div class="card-text-group">
+                            <strong>EMAIL</strong>
+                            <span>doreen4abel@gmail.com / bece21-dabel@mubas.ac.mw</span>
+                        </div>
                     </div>
 
+                    <!-- Phone Entry Tile -->
                     <div class="contact-card">
-                        <strong>Academic Email</strong>
-                        <span>bece21-dabel@mubas.ac.mw</span>
+                        <div class="card-icon-placeholder">
+                            <span class="fallback-dot"></span>
+                        </div>
+                        <div class="card-text-group">
+                            <strong>PHONE</strong>
+                            <span>+2565884136090 / +265984427564</span>
+                        </div>
                     </div>
 
-                    <div class="contact-card">
-                        <strong>Phone</strong>
-                        <span>+2565884136090 / +265984427564</span>
-                    </div>
-
-                    <a href="assets/Doreen_Abel_CV.pdf" download class="contact-card download-card">
-                        <strong>Download CV/Resume(PDF)</strong>
+                    <!-- Document Download Anchor Variant Block -->
+                    <a href="assets/Doreen_Abel_CV.pdf" download class="contact-card download-card-node">
+                        <div class="card-icon-placeholder">
+                            <span class="fallback-dot"></span>
+                        </div>
+                        <div class="card-text-group">
+                            <span>Download CV/Resume(PDF)</span>
+                        </div>
                     </a>
+
                 </div>
             </div>
 
-            <!-- RIGHT SPLIT ROW: INPUT SYSTEM TILES -->
+            <!-- RIGHT PANEL STREAM: SHADED INPUT GRID CONTAINER -->
             <div class="message-form-panel">
                 <form id="portfolio-contact-form" novalidate>
+
+                    <!-- First Name / Last Name Flex Split Row Array -->
                     <div class="form-row-split">
                         <div class="input-group">
                             <label for="first-name">First Name</label>
-                            <input type="text" id="first-name" required placeholder="First Name">
+                            <input type="text" id="first-name" required>
                         </div>
                         <div class="input-group">
                             <label for="last-name">Last Name</label>
-                            <input type="text" id="last-name" required placeholder="Last Name">
+                            <input type="text" id="last-name" required>
                         </div>
                     </div>
+
                     <div class="input-group">
                         <label for="user-email">Email</label>
-                        <input type="email" id="user-email" required placeholder="Email">
+                        <input type="email" id="user-email" required>
                     </div>
+
                     <div class="input-group">
                         <label for="subject-line">Subject</label>
-                        <input type="text" id="subject-line" required placeholder="Subject">
+                        <input type="text" id="subject-line" required>
                     </div>
+
                     <div class="input-group">
                         <label for="message-box">Message</label>
-                        <textarea id="message-box" rows="4" required placeholder="Message"></textarea>
+                        <textarea id="message-box" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-submit">Send message</button>
+
+                    <!-- Centered large action input submission button -->
+                    <button type="submit" class="btn btn-submit-node">Send message</button>
+
                 </form>
             </div>
 
         </section>
     </main>
 
+    <!-- FIXED STICKY FOOTER -->
     <footer class="site-footer">
-        <p>&copy; 2026 Doreen Providence Abel. MUBAS Engineering Track.</p>
+        <p>&copy; 2026 Doreen Providence Abel. MUBAS Year 5 Portfolio Project.</p>
     </footer>
 
     <script src="script.js"></script>
