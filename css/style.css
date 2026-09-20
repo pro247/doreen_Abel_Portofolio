@@ -137,6 +137,7 @@ header {
 .nav-links a:hover {
     color: var(--color-accent-hover);
     border-bottom: 2px solid var(--color-accent-hover);
+    text-decoration: none;
 }
 
 #theme-toggle {
@@ -207,6 +208,14 @@ header {
     justify-content: center;
     align-items: center;
     font-weight: 600;
+    background-color: var(--color-surface);
+}
+
+.hero-avatar-wrapper {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .metrics-panel-grid {
