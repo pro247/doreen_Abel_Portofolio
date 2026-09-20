@@ -1337,3 +1337,49 @@ img.wireframe-avatar-circle,
         padding: 1.1rem !important;
     }
 }
+
+/* ==========================================================================
+   HOMEPAGE INTERIOR HERO SOCIAL ICONS ROW SYSTEM
+   ========================================================================== */
+.hero-social-icons-row {
+    display: flex;
+    gap: 1.5rem;
+    /* Spacious padding margins separating individual icons */
+    margin-bottom: 2rem;
+    /* Creates clean breathing separation room above buttons */
+    align-items: center;
+}
+
+/* Base style rules for your new inline SVG vector icons */
+.hero-icon-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-text);
+    /* Automatically syncs with light/dark text theme colors */
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.hero-icon-link svg {
+    width: 26px;
+    /* High visibility scaling sizing */
+    height: 26px;
+}
+
+/* Interactive hover color transformation engine */
+.hero-icon-link:hover {
+    color: var(--color-accent-hover);
+    /* Switches to your calculated brand purple on focus */
+    transform: translateY(-3px);
+    /* Elegant physical float feedback shift */
+}
+
+/* Responsive adjustment targets small minimized screen tracking layout frames */
+@media (max-width: 950px) {
+    .hero-social-icons-row {
+        justify-content: center;
+        /* Centers icons neatly alongside your phone text block alignment */
+        margin-bottom: 1.75rem;
+    }
+}
