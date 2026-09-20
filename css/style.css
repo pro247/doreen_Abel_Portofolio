@@ -1232,3 +1232,108 @@ img.wireframe-avatar-circle,
     color: #FFFFFF;
     /* Illuminates clean white moon vector lines instantly */
 }
+
+/* ==========================================================================
+   11. COMPREHENSIVE FLUID RESPONSIVE ENGINE (Eliminates Side Margins & Empty Gaps)
+   ========================================================================== */
+@media (max-width: 950px) {
+
+    /* 1. Global Container Reset handles fluid padding footprints across phone windows */
+    main,
+    .main-content {
+        padding: 1.5rem 1rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* 2. ABOUT PAGE FLUID ENGINE */
+    .about-dashboard-layout {
+        display: flex !important;
+        flex-direction: column !important;
+        /* Disables rigid side columns; forces vertical layout stream */
+        gap: 2rem !important;
+        width: 100% !important;
+    }
+
+    /* Your left dashboard card from the image now expands fully to fill the screen boundaries edge-to-edge */
+    .profile-aside-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: none !important;
+        padding: 2rem 1.5rem !important;
+        /* Plump internal spacing cushion */
+    }
+
+    .content-stream-panel {
+        width: 100% !important;
+        flex: none !important;
+    }
+
+    .timeline-event-card {
+        flex-direction: column !important;
+        /* Stacks dates cleanly under technical titles on phones */
+        gap: 0.5rem !important;
+        width: 100% !important;
+    }
+
+    .timeline-date {
+        text-align: left !important;
+    }
+
+    /* 3. CONTACT PAGE ANTI-SQUISH FLUID ENGINE */
+    .contact-grid-wrapper {
+        display: flex !important;
+        flex-direction: column !important;
+        /* Stacks contact card items above form containers */
+        gap: 2rem !important;
+        width: 100% !important;
+    }
+
+    /* Left row information layout tiles expand fully */
+    .social-links-panel {
+        width: 100% !important;
+    }
+
+    .contact-method-cards {
+        width: 100% !important;
+        gap: 1rem !important;
+    }
+
+    .contact-card {
+        width: 100% !important;
+        /* Expands individual contact boxes across screen width */
+    }
+
+    /* Your Right Message Panel expands gracefully from tiny squished shapes into an elegant, clear card layout */
+    .message-form-panel {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 2rem 1.5rem !important;
+        /* Luxurious room boundaries for clean form layouts */
+    }
+
+    /* Converts first name/last name columns into clean, long stacked input layout fields */
+    .form-row-split {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0 !important;
+    }
+
+    .input-group {
+        width: 100% !important;
+        margin-bottom: 1.5rem !important;
+    }
+
+    .input-group input,
+    .input-group textarea {
+        width: 100% !important;
+        /* Hard-locks typing fields to consume 100% card track widths */
+        font-size: 1rem !important;
+    }
+
+    .btn-submit-node {
+        width: 100% !important;
+        /* Clean wide call-to-action button layout */
+        padding: 1.1rem !important;
+    }
+}
