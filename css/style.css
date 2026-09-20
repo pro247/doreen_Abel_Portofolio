@@ -136,8 +136,9 @@ header {
 .nav-links a.active,
 .nav-links a:hover {
     color: var(--color-accent-hover);
-    border-bottom: 2px solid var(--color-accent-hover);
+    border-bottom: none;
     text-decoration: none;
+
 }
 
 #theme-toggle {
@@ -1148,6 +1149,7 @@ img.wireframe-avatar-circle,
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
+        border-bottom: none;
     }
 }
 
