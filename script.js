@@ -35,28 +35,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==========================================================================
-    // B. LIGHT / DARK MODE ENGINE (Theme Preference Variable Swap Manager)
+    // B. VECTOR PILL SLIDER THEME SWITCH ENGINE (Dynamic State Variable Manager)
     // ==========================================================================
     const themeToggleBtn = document.getElementById('theme-toggle');
     const cachedPreference = localStorage.getItem('theme') || 'light';
 
-    // Run state injection immediately on element initialization nodes
+    // Inject attribute data states immediately onto the HTML root block on boot
     document.documentElement.setAttribute('data-theme', cachedPreference);
-    if (themeToggleBtn) {
-        themeToggleBtn.textContent = cachedPreference === 'dark' ? '☀️' : '🌙';
-    }
 
     if (themeToggleBtn) {
         themeToggleBtn.addEventListener('click', () => {
             const currentActiveState = document.documentElement.getAttribute('data-theme');
             const targetState = currentActiveState === 'light' ? 'dark' : 'light';
 
+            // Core engine switches root variables; CSS selectors handle shifting animations automatically
             document.documentElement.setAttribute('data-theme', targetState);
             localStorage.setItem('theme', targetState);
-            themeToggleBtn.textContent = targetState === 'dark' ? '☀️' : '🌙';
         });
     }
-
     // ==========================================================================
     // C. ASYNCHRONOUS DATA ACQUISITION LOOP (Dynamic Cloud API Stream Handler)
     // ==========================================================================
