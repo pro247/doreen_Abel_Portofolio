@@ -7,10 +7,7 @@
     <title>System Exception | 404 Page Not Found</title>
     <link rel="stylesheet" href="css/style.css">
     <script>
-        /* 
-           LECTURE ENGINE CRITERION: Run theme check immediately BEFORE the page 
-           renders to prevent flash of white screen if the user is in dark mode!
-        */
+
         const savedTheme = localStorage.getItem('theme') || 'light';
         document.documentElement.setAttribute('data-theme', savedTheme);
     </script>
@@ -18,10 +15,7 @@
 
 <body class="site-wrapper error-body-canvas">
 
-    <!-- 
-       NOTE: NO NAVBAR OR THEME TOGGLE BUTTON IS INCLUDED HERE.
-       This satisfies the exception rule preventing broken routing paths.
-    -->
+
 
     <!-- MAIN CENTERED EXCEPTION PANEL (Matches your Figma 404 Layout perfectly) -->
     <main class="main-content error-page-alignment">
@@ -36,10 +30,7 @@
         </section>
     </main>
 
-    <!-- CENTERED FOOTER NOTIFICATION -->
-    <footer class="site-footer">
-        <p>&copy; 2026 Doreen Providence Abel. Automated Exception Core Handler.</p>
-    </footer>
+
 
 </body>
 
