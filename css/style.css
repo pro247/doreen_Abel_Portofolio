@@ -156,6 +156,7 @@ header {
     align-items: center;
     gap: 3rem;
     margin-bottom: 5rem;
+    width: 100%;
 }
 
 .hero-text-block .eyebrow-sub {
@@ -169,6 +170,11 @@ header {
     font-size: 3.2rem;
     font-weight: 700;
     margin: 0.3rem 0;
+}
+
+.hero-text-block {
+    flex: 1;
+    min-width: 0;
 }
 
 .hero-text-block h2 {
@@ -198,24 +204,35 @@ header {
     background-color: var(--color-surface);
 }
 
-.wireframe-avatar-circle {
-    width: 260px;
-    height: 260px;
-    border-radius: 50%;
-    background-color: var(--color-surface);
-    border: 2.5px dashed var(--color-border);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 600;
-    background-color: var(--color-surface);
-}
 
 .hero-avatar-wrapper {
     flex-shrink: 0;
+    width: 320px;
+    /* Absolute maximum boundary width */
+    height: 320px;
+    /* Absolute maximum boundary height */
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    /* Prevents raw photo from blowing past the frame */
+}
+
+img.wireframe-avatar-circle,
+.hero-avatar-wrapper img {
+    width: 300px !important;
+    /* Hard-locks the width to a clean, spacious dimension */
+    height: 300px !important;
+    /* Hard-locks the height to maintain a 1:1 square ratio block */
+    max-width: 300px !important;
+    max-height: 300px !important;
+    border-radius: 50% !important;
+    /* Crops rectangular picture corners into a flawless circle */
+    object-fit: cover !important;
+    object-position: center top !important;
+    border: 3px var(--color-accent) !important;
+    background-color: var(--color-surface);
+    display: block !important;
 }
 
 .metrics-panel-grid {
