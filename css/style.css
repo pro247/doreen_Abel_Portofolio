@@ -476,6 +476,18 @@ img.wireframe-avatar-circle,
     margin-bottom: 3rem;
 }
 
+.article-text-content p {
+    font-size: 1.05rem;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+
+}
+
+.article-text-content p:last-child {
+    margin-bottom: 0;
+}
+
 .wireframe-image-block {
     background-color: var(--color-surface);
     border: 1px solid var(--color-border);
