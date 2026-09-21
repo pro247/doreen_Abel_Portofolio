@@ -1,13 +1,8 @@
-/**
- * MUBAS Year 5 Internet & Web Services Portfolio Interactivity Script
- * Central Application Core Handler Engine
- */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ==========================================================================
     // A. MOBILE HAMBURGER NAVIGATION MOBILE DRAWER INTERACTION
-    // ==========================================================================
+
     const hamburgerTrigger = document.getElementById('hamburger-trigger');
     const navLinksContainer = document.querySelector('.nav-links');
 
