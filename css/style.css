@@ -319,6 +319,13 @@ img.wireframe-avatar-circle,
     margin-bottom: 3rem;
 }
 
+.narrative-block h1,
+.milestones-block h1,
+.experience-block h1 {
+    margin-bottom: 1.25rem;
+    font-weight: 700;
+}
+
 .narrative-block h2,
 .milestones-block h2,
 .experience-block h2 {
@@ -370,21 +377,6 @@ img.wireframe-avatar-circle,
     display: block;
     font-weight: 600;
     margin-bottom: 0.5rem;
-}
-
-.progress-track {
-    background-color: var(--color-surface);
-    border: 1px solid var(--color-border);
-    height: 14px;
-    width: 100%;
-    border-radius: 6px;
-    overflow: hidden;
-}
-
-.progress-bar {
-    background-color: var(--color-accent);
-    height: 100%;
-    border-radius: 6px;
 }
 
 /* ==========================================================================
