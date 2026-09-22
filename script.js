@@ -31,19 +31,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // B. VECTOR PILL SLIDER THEME SWITCH ENGINE (Dynamic State Variable Manager)
-
     const themeToggleBtn = document.getElementById('theme-toggle');
-    const cachedPreference = localStorage.getItem('theme') || 'light';
-
-    // Inject attribute data states immediately onto the HTML root block on boot
-    document.documentElement.setAttribute('data-theme', cachedPreference);
 
     if (themeToggleBtn) {
         themeToggleBtn.addEventListener('click', () => {
             const currentActiveState = document.documentElement.getAttribute('data-theme');
             const targetState = currentActiveState === 'light' ? 'dark' : 'light';
 
-            // Core engine switches root variables; CSS selectors handle shifting animations automatically
+            // Instantly switches root variables and updates browser memory cache safely
             document.documentElement.setAttribute('data-theme', targetState);
             localStorage.setItem('theme', targetState);
         });
@@ -51,12 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // C. ASYNCHRONOUS DATA ACQUISITION LOOP (Dynamic Cloud API Stream Handler)
 
-    // ==========================================================================
-    // C. ASYNCHRONOUS DATA ACQUISITION LOOP (Dynamic Cloud API Stream Handler)
-    // ==========================================================================
-    // ==========================================================================
-    // C. ASYNCHRONOUS DATA ACQUISITION LOOP (Dynamic Cloud API Stream Handler)
-    // ==========================================================================
     const targetRepoGrid = document.getElementById('repo-container');
 
     async function streamCloudRepositoryData() {

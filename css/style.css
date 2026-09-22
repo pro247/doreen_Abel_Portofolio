@@ -13,6 +13,7 @@
     --max-width: 1200px;
     --radius: 12px;
     --transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+
 }
 
 /* Dark Mode Variable Overrides (Theme Engine Variable Swap) */
@@ -24,6 +25,8 @@
     --color-accent-hover: #D6BCFA;
     --color-border: #2D253E;
 }
+
+
 
 /* ==========================================================================
    2. STICKY FOOTER CORE ENGINE INITIALIZATION
