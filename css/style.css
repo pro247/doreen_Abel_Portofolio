@@ -636,7 +636,7 @@ img.wireframe-avatar-circle,
         padding: 6rem 2rem 2rem 2rem;
         gap: 2rem;
         text-align: left;
-        z-index: 1001;
+        z-index: 9999;
         box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
         opacity: 0;
         visibility: hidden;

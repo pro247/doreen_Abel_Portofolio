@@ -29,9 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ==========================================================================
+
     // B. VECTOR PILL SLIDER THEME SWITCH ENGINE (Dynamic State Variable Manager)
-    // ==========================================================================
+
     const themeToggleBtn = document.getElementById('theme-toggle');
     const cachedPreference = localStorage.getItem('theme') || 'light';
 
@@ -48,9 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('theme', targetState);
         });
     }
-    // ==========================================================================
+
     // C. ASYNCHRONOUS DATA ACQUISITION LOOP (Dynamic Cloud API Stream Handler)
-    // ==========================================================================
+
     const targetRepoGrid = document.getElementById('repo-container');
     const TARGET_NODE_USER = 'pro247'; // Directly points to your profile account directory name!
 
