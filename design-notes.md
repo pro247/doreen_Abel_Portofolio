@@ -45,3 +45,8 @@ In alignment with the course framework guidelines, this section outlines the exp
 ### D. Vector Asset Engineering
 * **AI Task Allocation:** Rendered custom high-resolution architectural infographics used to contextualize the "Fav Topic" long-form technical article layout.
 * **Human-in-the-Loop Override:** Converted complex illustrations into lightweight native inline SVG vector elements (`<svg>`) inside navigation header bars to guarantee crisp theme scaling without external assets.
+
+### E. Responsive Breakpoint Strategy
+ #1. Breakpoint 1 (Mobile Baseline — Under 480px): Single-column stacked cards, full fluid width elements drops side gaps, left sliding capsule side navigation drawer active, centered social icons.
+#2. Breakpoint 2 (Tablet Scaling Tracker — 480px to 950px): Form rows flex into compact parameters, timeline layout blocks adapt grid footprints cleanly to mid-tier screens.
+#3. Breakpoint 3 (Desktop Monitor Expansion — Over 950px): Full 12-column flexbox grid expands, horizontal navigation menu links float open on top, 3-column project cards layout unlocks edge-to-edge.
