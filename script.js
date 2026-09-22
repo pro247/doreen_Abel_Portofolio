@@ -54,15 +54,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================================================
     // C. ASYNCHRONOUS DATA ACQUISITION LOOP (Dynamic Cloud API Stream Handler)
     // ==========================================================================
+    // ==========================================================================
+    // C. ASYNCHRONOUS DATA ACQUISITION LOOP (Dynamic Cloud API Stream Handler)
+    // ==========================================================================
     const targetRepoGrid = document.getElementById('repo-container');
-    const TARGET_NODE_USER = 'pro247'; // Your absolute GitHub handle node
 
     async function streamCloudRepositoryData() {
-        if (!targetRepoGrid) return; // Breaks loop gracefully on alternative page layouts
+        if (!targetRepoGrid) return; // Breaks loop gracefully if loading alternative text pages
 
         try {
             // Absolute URL endpoint handshake ignores relative directory issues on live hosting servers
-            const endpointStream = await fetch(`https://github.com{TARGET_NODE_USER}/repos?sort=updated&per_page=3`);
+            const endpointStream = await fetch("https://github.com");
 
             if (!endpointStream.ok) {
                 throw new Error('Cloud signal validation failure structural exception.');
@@ -108,6 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Direct invocation command runs live cloud integration updates automatically
     streamCloudRepositoryData();
 
 
