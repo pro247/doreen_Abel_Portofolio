@@ -47,7 +47,9 @@ body {
     line-height: 1.6;
     display: flex;
     flex-direction: column;
-    /* Vertically locks layout headers and footer parameters */
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* Container boxes center elements dynamically inside a fluid 12-column grid layout constraint */
