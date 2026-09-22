@@ -100,9 +100,11 @@ header {
     border-bottom: 1px solid var(--color-border);
     transition: var(--transition);
     width: 100%;
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 1000;
+    left: 0;
+    z-index: 999999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .nav-container {
@@ -117,6 +119,11 @@ header {
 .logo {
     font-weight: 700;
     font-size: 1.4rem;
+}
+
+main,
+.main-content {
+    margin-top: 75px !important;
 }
 
 .nav-links {
