@@ -51,13 +51,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // C. ASYNCHRONOUS DATA ACQUISITION LOOP (Dynamic Cloud API Stream Handler)
 
+    // ==========================================================================
+    // C. ASYNCHRONOUS DATA ACQUISITION LOOP (Dynamic Cloud API Stream Handler)
+    // ==========================================================================
     const targetRepoGrid = document.getElementById('repo-container');
-    const TARGET_NODE_USER = 'pro247'; // Directly points to your profile account directory name!
+    const TARGET_NODE_USER = 'pro247'; // Your absolute GitHub handle node
 
     async function streamCloudRepositoryData() {
-        if (!targetRepoGrid) return; // Breaks loop gracefully if loading alternative text frames
+        if (!targetRepoGrid) return; // Breaks loop gracefully on alternative page layouts
 
         try {
+            // Absolute URL endpoint handshake ignores relative directory issues on live hosting servers
             const endpointStream = await fetch(`https://github.com{TARGET_NODE_USER}/repos?sort=updated&per_page=3`);
 
             if (!endpointStream.ok) {
@@ -65,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const datasets = await endpointStream.json();
-            targetRepoGrid.innerHTML = ''; // Flushes loading state placeholder card safely
+            targetRepoGrid.innerHTML = ''; // Flushes loading state cards safely
 
             if (datasets.length === 0) {
                 targetRepoGrid.innerHTML = `
@@ -98,14 +102,14 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (faultException) {
             console.error('API Stream Processing Exception:', faultException);
             targetRepoGrid.innerHTML = `
-                <div class="loading-state-card" style="border-color: #E53E3E;">
-                    <p>❌ Operational Route Interrupted: Failed to link server array nodes securely from GitHub.</p>
+                <div class="loading-state-card" style="border-color: #E53E3E; background-color: rgba(229, 62, 62, 0.02); padding: 2rem; border-radius: var(--radius); text-align: center;">
+                    <p style="color: #E53E3E; font-weight: 700;">❌ Operational Route Interrupted: Failed to link server array nodes securely from GitHub.</p>
                 </div>`;
         }
     }
 
-    // Direct invocation command runs live cloud integration updates automatically
     streamCloudRepositoryData();
+
 
     // ==========================================================================
     // D. SECURE FIELD SUBMISSION INTERCEPT (Contact Form Validation Logic)
