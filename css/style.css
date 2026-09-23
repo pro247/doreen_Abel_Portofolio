@@ -427,7 +427,6 @@ img.wireframe-avatar-circle,
 .projects-showcase-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* Enforces 3 Columns side-by-side matching desktop wireframe columns */
     gap: 1.5rem;
     margin-bottom: 5rem;
 }
@@ -550,7 +549,7 @@ img.wireframe-avatar-circle,
     font-weight: 500;
 }
 
-/* ==========================================================================9. CONTACT FORMS SCHEMATICS========================================================================== */
+/* 9. CONTACT FORMS SCHEMATICS*/
 .contact-grid-wrapper {
     display: grid;
     grid-template-columns: 1fr 1.3fr;
@@ -598,7 +597,7 @@ img.wireframe-avatar-circle,
     font-size: 1rem;
 }
 
-/* ==========================================================================10. MOBILE CROSS-VIEWPORT FALLBACK OVERRIDES (Responsive Compaction Engine)========================================================================== */
+/*. MOBILE CROSS-VIEWPORT FALLBACK OVERRIDES (Responsive Compaction Engine) */
 @media (max-width: 950px) {
 
     main,
@@ -730,9 +729,9 @@ img.wireframe-avatar-circle,
     }
 }
 
-/* ==========================================================================
+/* 
    FIGMA CANVAS ALIGNED SKILLS PAGE STYLING (Screenshot Parity Grounding)
-   ========================================================================== */
+   */
 .skills-hero-header {
     margin-bottom: 3rem;
 }
@@ -804,9 +803,9 @@ img.wireframe-avatar-circle,
     }
 }
 
-/* ==========================================================================
+/*
    FAV TOPIC DOUBLE COLUMN SYSTEM STYLE MAP 
-   ========================================================================== */
+   */
 .article-master-heading {
     text-align: center;
     margin-bottom: 3.5rem;
@@ -820,7 +819,6 @@ img.wireframe-avatar-circle,
 .article-split-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* Two columns side-by-side matching columns 1-6 and 7-12 */
     gap: 3rem;
 }
 
@@ -843,9 +841,9 @@ img.wireframe-avatar-circle,
     opacity: 0.9;
 }
 
-/* ==========================================================================
+/* 
    404 ERROR STATE ABSOLUTE CENTERING ENGINE
-   ========================================================================== */
+    */
 .error-page-alignment {
     display: flex;
     justify-content: center;
@@ -878,43 +876,24 @@ img.wireframe-avatar-circle,
     margin-bottom: 2.5rem;
 }
 
-/* Responsive folding rule matches mobile configurations automatically */
-@media (max-width: 850px) {
-    .article-split-grid {
-        grid-template-columns: 1fr;
-        /* Collapses text columns straight down on phone frames */
-        gap: 2rem;
-    }
-}
-
-/* ==========================================================================
-   404 SERVER EXCEPTION CUSTOM CANVAS OVERRIDES
-   ========================================================================== */
 .error-body-canvas {
     justify-content: center;
     align-items: center;
     background-color: var(--color-bg);
 }
 
-.error-page-alignment {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 80vh;
-    /* Expands container view since header block is removed */
-}
 
-/* ==========================================================================
+/* 
    CONTACT SOCIAL CARDS GRID SYSTEM (Figma Design Parity Map)
-   ========================================================================== */
+    */
 
 /* 1. Split Layout Grid Wrapper */
 .contact-grid-wrapper {
     display: grid;
     grid-template-columns: 1fr 1.3fr;
-    /* Splits left column vs right form panel */
     gap: 3.5rem;
     margin-top: 2rem;
+    align-items: start;
 }
 
 /* 2. Left Column Layout Spacing */
@@ -944,23 +923,20 @@ img.wireframe-avatar-circle,
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    /* Creates exact separation margins between boxes */
+    margin-top: 1.5rem;
 }
+
 
 /* 4. The Individual Boxed Cards (Directly Mirroring Your Figma Boxes) */
 .contact-card {
     background-color: var(--color-surface);
-    /* Light purple calculated surface tint */
     border: 1px solid var(--color-border);
     border-radius: var(--radius);
-    /* Rounded corner variables matching design system */
     padding: 1.25rem 1.5rem;
     display: flex;
     flex-direction: column;
-    /* Stacks bold labels on top of text handles */
     gap: 0.25rem;
     text-decoration: none;
-    /* Keeps anchors from displaying standard underlines */
     color: var(--color-text);
     transition: var(--transition);
 }
@@ -978,7 +954,7 @@ img.wireframe-avatar-circle,
 .contact-card span {
     font-size: 1rem;
     word-break: break-all;
-    /* Keeps long email addresses from clipping out of the boxes */
+
 }
 
 /* Special styling override variant box for your Download Link Card */
@@ -991,40 +967,20 @@ img.wireframe-avatar-circle,
 .contact-card:hover {
     border-color: var(--color-accent-hover);
     background-color: var(--color-bg);
-    /* Swaps backgrounds smoothly to highlight focus */
     transform: translateY(-2px);
-    /* Subtle shift up interaction */
 }
 
 /* 5. Mobile Responsive Auto-collapse Overrides */
 @media (max-width: 900px) {
     .contact-grid-wrapper {
         grid-template-columns: 1fr;
-        /* Collapses split panels onto single lines for phones */
         gap: 2.5rem;
     }
 }
 
-/* ==========================================================================
-   CONTACT WORKSPACE LAYOUT (Figma Screenshot Grid Parity Mapping)
-   ========================================================================== */
-/* ==========================================================================
-   9. CONTACT PAGE SCHEMATICS (Snug Sizing & Real Icon Alignment)
-   ========================================================================== */
-.contact-grid-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1.15fr;
-    gap: 3rem;
-    align-items: start;
-}
 
-.contact-method-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    /* Tighter gap matching sleek layout boxes */
-    margin-top: 1.5rem;
-}
+
+
 
 /* Snug Left Social Cards (Height reduced to tightly wrap text) */
 .contact-card {
@@ -1082,13 +1038,12 @@ img.wireframe-avatar-circle,
     background-color: var(--color-surface);
     border: 1px solid var(--color-border);
     padding: 2rem;
-    /* Reduced outter cushion padding */
     border-radius: var(--radius);
 }
 
 .input-group {
     margin-bottom: 1rem;
-    /* Compact group separations */
+
 }
 
 .input-group label {
@@ -1102,7 +1057,6 @@ img.wireframe-avatar-circle,
 .input-group input {
     width: 100%;
     padding: 0.65rem 0.85rem;
-    /* Slim input fields look clean and snappy */
     border: 1px solid var(--color-border);
     background-color: var(--color-bg);
     color: var(--color-text);
@@ -1121,7 +1075,7 @@ img.wireframe-avatar-circle,
     border-radius: 6px;
     font-size: 0.95rem;
     resize: vertical;
-    /* Prevents users from breaking horizontal layouts */
+
 }
 
 .contact-card:hover {
@@ -1132,7 +1086,6 @@ img.wireframe-avatar-circle,
 /* 3. Right Column Form Background Panel */
 .message-form-panel {
     background-color: var(--color-surface);
-    /* Shaded gray/purple container card panel matching your canvas */
     border: 1px solid var(--color-border);
     padding: 2.5rem;
     border-radius: var(--radius);
@@ -1141,7 +1094,6 @@ img.wireframe-avatar-circle,
 .form-row-split {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* Splitting row for First Name / Last Name */
     gap: 1.25rem;
 }
 
@@ -1163,7 +1115,6 @@ img.wireframe-avatar-circle,
     padding: 0.9rem 1rem;
     border: 1px solid var(--color-border);
     background-color: var(--color-bg);
-    /* Pure white internal input substrate */
     color: var(--color-text);
     font-family: var(--font-sans);
     border-radius: 6px;
@@ -1183,7 +1134,6 @@ img.wireframe-avatar-circle,
     width: 100%;
     padding: 1rem;
     background-color: var(--color-bg);
-    /* Flat white card button appearance matching sketch reference */
     color: var(--color-text);
     border: 1px solid var(--color-border);
     border-radius: 6px;
@@ -1218,9 +1168,9 @@ img.wireframe-avatar-circle,
     }
 }
 
-/* ==========================================================================
+/*
    MOBILE HAMBURGER DRAWER & RESPONSIVE NAV COMPONENT STYLES
-   ========================================================================== */
+*/
 .nav-utilities {
     display: flex;
     align-items: center;
@@ -1229,7 +1179,6 @@ img.wireframe-avatar-circle,
 
 #hamburger-trigger {
     display: none;
-    /* Hidden by default on standard wide desktop monitors */
     background: none;
     border: none;
     font-size: 1.6rem;
@@ -1243,7 +1192,6 @@ img.wireframe-avatar-circle,
 @media (max-width: 950px) {
     #hamburger-trigger {
         display: block;
-        /* Turns on the hamburger icon button component across phone frames */
     }
 
     /* Transforms the standard links row list into an absolute positioned drop-down panel */
@@ -1252,7 +1200,6 @@ img.wireframe-avatar-circle,
         flex-direction: column;
         position: absolute;
         top: 70px;
-        /* Sits perfectly beneath the header row boundary line */
         left: 0;
         width: 100%;
         background-color: var(--color-surface);
@@ -1261,8 +1208,6 @@ img.wireframe-avatar-circle,
         gap: 1.5rem;
         text-align: center;
         z-index: 999;
-
-        /* Interactive Animation Logic: Hidden off-screen by default until class is added */
         opacity: 0;
         visibility: hidden;
         transform: translateY(-10px);
@@ -1278,9 +1223,9 @@ img.wireframe-avatar-circle,
     }
 }
 
-/* ==========================================================================
+/* 
    PILL SLIDER THEME TOGGLE (Figma Screenshot Design Parity Mapping)
-   ========================================================================== */
+ */
 .theme-switch-pill {
     position: relative;
     width: 64px;
@@ -1306,7 +1251,6 @@ img.wireframe-avatar-circle,
     height: 26px;
     border-radius: 50%;
     background-color: #FFFFFF;
-    /* High contrast solid canvas knob mask */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease;
     z-index: 1;
@@ -1317,19 +1261,17 @@ img.wireframe-avatar-circle,
     width: 16px;
     height: 16px;
     z-index: 2;
-    /* Keeps line icons layered clearly on top of the slide track knob */
     position: relative;
     transition: color 0.3s ease;
 }
 
 .theme-switch-pill .icon-sun {
     color: #000000;
-    /* Dark highlight path for selected sun in light mode */
 }
 
 .theme-switch-pill .icon-moon {
     color: #7C7A85;
-    /* Semi-transparent dormant state for moon in light mode */
+
 }
 
 /* --------------------------------------------------------------------------
@@ -1337,7 +1279,6 @@ img.wireframe-avatar-circle,
    -------------------------------------------------------------------------- */
 [data-theme="dark"] .theme-switch-pill {
     background-color: #0D0A14;
-    /* Deep dark capsule frame substrate background */
     border-color: #2D253E;
 }
 

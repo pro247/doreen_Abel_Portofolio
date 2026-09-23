@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const datasets = await endpointStream.json();
-            targetRepoGrid.innerHTML = ''; // Flushes loading state cards safely
+            targetRepoGrid.innerHTML = '';
 
             if (datasets.length === 0) {
                 targetRepoGrid.innerHTML = `
@@ -94,18 +94,17 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('API Stream Processing Exception:', faultException);
             targetRepoGrid.innerHTML = `
                 <div class="loading-state-card" style="border-color: #E53E3E; background-color: rgba(229, 62, 62, 0.02); padding: 2rem; border-radius: var(--radius); text-align: center;">
-                    <p style="color: #E53E3E; font-weight: 700;">❌ Operational Route Interrupted: Failed to link server array nodes securely from GitHub.</p>
+                    <p style="color: #E53E3E; font-weight: 700;"> Operational Route Interrupted: Failed to link server array nodes securely from GitHub.</p>
                 </div>`;
         }
     }
 
-    // Direct invocation command runs live cloud integration updates automatically
+
     streamCloudRepositoryData();
 
 
-    // ==========================================================================
     // D. SECURE FIELD SUBMISSION INTERCEPT (Contact Form Validation Logic)
-    // ==========================================================================
+
     const interactionForm = document.getElementById('portfolio-contact-form');
 
     if (interactionForm) {
@@ -123,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             alert(`  Signal Locked! Communication loop logged from client node: "${fieldFirst} ${fieldLast}". Transmission simulation complete.`);
-            interactionForm.reset(); // Restores placeholder properties safely
+            interactionForm.reset();
         });
     }
 });
