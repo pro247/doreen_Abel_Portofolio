@@ -1299,9 +1299,9 @@ img.wireframe-avatar-circle,
     /* Illuminates clean white moon vector lines instantly */
 }
 
-/* ==========================================================================
+/*
    11. COMPREHENSIVE FLUID RESPONSIVE ENGINE (Eliminates Side Margins & Empty Gaps)
-   ========================================================================== */
+   */
 @media (max-width: 950px) {
 
     /* 1. Global Container Reset handles fluid padding footprints across phone windows */
@@ -1316,7 +1316,6 @@ img.wireframe-avatar-circle,
     .about-dashboard-layout {
         display: flex !important;
         flex-direction: column !important;
-        /* Disables rigid side columns; forces vertical layout stream */
         gap: 2rem !important;
         width: 100% !important;
     }
@@ -1327,7 +1326,7 @@ img.wireframe-avatar-circle,
         max-width: 100% !important;
         flex: none !important;
         padding: 2rem 1.5rem !important;
-        /* Plump internal spacing cushion */
+
     }
 
     .content-stream-panel {
@@ -1367,7 +1366,7 @@ img.wireframe-avatar-circle,
 
     .contact-card {
         width: 100% !important;
-        /* Expands individual contact boxes across screen width */
+
     }
 
     /* Your Right Message Panel expands gracefully from tiny squished shapes into an elegant, clear card layout */
@@ -1375,7 +1374,7 @@ img.wireframe-avatar-circle,
         width: 100% !important;
         max-width: 100% !important;
         padding: 2rem 1.5rem !important;
-        /* Luxurious room boundaries for clean form layouts */
+
     }
 
     /* Converts first name/last name columns into clean, long stacked input layout fields */
@@ -1393,26 +1392,22 @@ img.wireframe-avatar-circle,
     .input-group input,
     .input-group textarea {
         width: 100% !important;
-        /* Hard-locks typing fields to consume 100% card track widths */
         font-size: 1rem !important;
     }
 
     .btn-submit-node {
         width: 100% !important;
-        /* Clean wide call-to-action button layout */
         padding: 1.1rem !important;
     }
 }
 
-/* ==========================================================================
+/* 
    HOMEPAGE INTERIOR HERO SOCIAL ICONS ROW SYSTEM
-   ========================================================================== */
+   */
 .hero-social-icons-row {
     display: flex;
     gap: 1.5rem;
-    /* Spacious padding margins separating individual icons */
     margin-bottom: 2rem;
-    /* Creates clean breathing separation room above buttons */
     align-items: center;
 }
 
@@ -1422,30 +1417,26 @@ img.wireframe-avatar-circle,
     justify-content: center;
     align-items: center;
     color: var(--color-text);
-    /* Automatically syncs with light/dark text theme colors */
     text-decoration: none;
     transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .hero-icon-link svg {
     width: 26px;
-    /* High visibility scaling sizing */
     height: 26px;
 }
 
 /* Interactive hover color transformation engine */
 .hero-icon-link:hover {
     color: var(--color-accent-hover);
-    /* Switches to your calculated brand purple on focus */
     transform: translateY(-3px);
-    /* Elegant physical float feedback shift */
+
 }
 
 /* Responsive adjustment targets small minimized screen tracking layout frames */
 @media (max-width: 950px) {
     .hero-social-icons-row {
         justify-content: center;
-        /* Centers icons neatly alongside your phone text block alignment */
         margin-bottom: 1.75rem;
     }
 }
