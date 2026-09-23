@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             // Absolute URL endpoint handshake ignores relative directory issues on live hosting servers
-            const endpointStream = await fetch("https://github.com");
+            const endpointStream = await fetch("https://api.github.com/users/pro247/repos?sort=updated&direction=desc&per_page=10");
 
             if (!endpointStream.ok) {
                 throw new Error('Cloud signal validation failure structural exception.');
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (datasets.length === 0) {
                 targetRepoGrid.innerHTML = `
                     <div class="loading-state-card">
-                        <p>📦 Zero open public repository assets linked to this account directory node.</p>
+                        <p> Zero open public repository assets linked to this account directory node.</p>
                     </div>`;
                 return;
             }
@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            alert(`⚡ Signal Locked! Communication loop logged from client node: "${fieldFirst} ${fieldLast}". Transmission simulation complete.`);
+            alert(`  Signal Locked! Communication loop logged from client node: "${fieldFirst} ${fieldLast}". Transmission simulation complete.`);
             interactionForm.reset(); // Restores placeholder properties safely
         });
     }
